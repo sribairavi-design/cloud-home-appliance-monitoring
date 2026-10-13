@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    font-family: 'Inter', sans-serif;
+    color: #20263b;
+    background: #f5f7fc;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.topbar {
+    height: 72px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #e9ecf4;
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: 800;
+    color: #5846d8;
+    text-decoration: none;
+}
+
+.cloud-status {
+    color: #4e5a70;
+    font-size: 13px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #21b77a;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.container {
+    width: min(1100px, 88%);
+    margin: 42px auto;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #7565d9;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    font-size: clamp(26px, 4vw, 37px);
+    margin: 10px 0;
+    letter-spacing: -1px;
+}
+
+h2 { margin: 6px 0; font-size: 24px; }
+
+.muted { color: #778197; font-size: 14px; line-height: 1.7; }
+
+.date-card {
+    background: #eae7ff;
+    padding: 20px 25px;
+    border-radius: 16px;
+    min-width: 190px;
+    display: grid;
+    gap: 8px;
+}
+
+.date-card span, .date-card small {
+    color: #7565b4;
+    font-size: 11px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 30px 0 40px;
+}
+
+.stat-card, .appliance-card {
+    background: white;
+    border: 1px solid #e9ecf4;
+    border-radius: 17px;
+    padding: 24px;
+    box-shadow: 0 6px 22px #20263b06;
+}
+
+.stat-card span, .stat-card small {
+    display: block;
+    color: #7b8498;
+    font-size: 12px;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 32px;
+    margin: 13px 0 8px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.refresh-button {
+    background: white;
+    border: 1px solid #e0e3ee;
+    border-radius: 9px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #4c45a7;
+    font-weight: 600;
+}
+
+.appliance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.appliance-card { padding: 22px; }
+
+.device-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.device-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    background: #f0edff;
+    border-radius: 14px;
+    font-size: 25px;
+}
+
+.device-top h3 { margin: 0 0 6px; font-size: 17px; }
+.device-top p { margin: 0; color: #8a92a5; font-size: 12px; }
+
+.state {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 700;
+    color: #a0a6b5;
+}
+
+.state.on { color: #159568; }
+
+.device-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+    color: #7b8498;
+    font-size: 12px;
+}
+
+.device-info strong {
+    display: block;
+    margin-top: 7px;
+    color: #283047;
+    font-size: 15px;
+}
+
+.device-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #edf0f6;
+    padding-top: 17px;
+    font-size: 13px;
+}
+
+.toggle {
+    border: 0;
+    padding: 10px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 700;
+    background: #eeeaff;
+    color: #6553d8;
+}
+
+.toggle.is-on {
+    background: #e2f8ed;
+    color: #16875d;
+}
+
+.toggle:disabled { opacity: 0.5; cursor: wait; }
+
+.message { min-height: 20px; color: #bd3e4d; font-size: 13px; }
+.loading { color: #778197; }
+.disclaimer { color: #8b93a4; font-size: 11px; margin-top: 30px; }
+
+@media (max-width: 700px) {
+    .welcome { align-items: flex-start; flex-direction: column; }
+    .date-card { width: 100%; }
+    .stats { grid-template-columns: 1fr; }
+    .appliance-grid { grid-template-columns: 1fr; }
+    .container { margin-top: 28px; }
+    .topbar { padding: 0 6%; }
+}
